@@ -32,22 +32,22 @@ const theme = createTheme({
 })
 
 
-const TourCard = () => {
+const TourCard = ({tour}) => {
     // variant="outlined", squared, rounded  --Props that can be passed to the paper component
     //  return <Paper elevation={3}>Hello</Paper>
     return (
 
         <Grid item xs={3}>
             <ThemeProvider theme={theme}>
-                <Paper elevation={3}>
+                <Paper elevation={16}>
                     <img 
-                    src='https://www.niagarafallsstatepark.com/~/media/parks/niagara-falls/homepage/niagara-falls-mist-880x592.jpg' 
+                    src={tour.image} 
                     alt='Niagra_Falls_Image' 
                     className='img'
                     />
                     <Box paddingX={1}>
                     <Typography variant='subtitle1' component='h2' >
-                        Immerse into the Falls
+                        {tour.name}
                     </Typography>
                         <Box
                             sx={{
@@ -57,7 +57,7 @@ const TourCard = () => {
                             >
                                 <AccessTime sx={{width: 12.5}} />
                                 <Typography variant='body2' component='p' marginLeft={0.5} >
-                                        5 hours
+                                        {tour.duration} hours
                                 </Typography>
                         </Box>
                     <Box
@@ -69,21 +69,21 @@ const TourCard = () => {
                     >
                         <Rating 
                             name='read-only' 
-                            value={4.5} 
+                            value={tour.rating} 
                             precision={0.5} 
                             size='small' 
                             readOnly 
                         />
                         <Typography variant='body2' component='p' marginLeft={0.5} >
-                            4.5
+                            {tour.rating}
                         </Typography>
                         <Typography variant='body2' component='p' marginLeft={1.5} >
-                            (655 reviews)
+                            ({tour.numberOfReviews} reviews)
                         </Typography>
                     </Box>
                     <Box>
                     <Typography variant='h6' component='h3' marginTop={0} >
-                            From C $147
+                            From C {tour.price}
                     </Typography>
                     </Box>
                     </Box>
