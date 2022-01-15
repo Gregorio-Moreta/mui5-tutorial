@@ -7,11 +7,11 @@ function App() {
   return (
     <div className="App">
       <Container>
-        <Grid container space={5}>
-        <TourCard />
-        <TourCard />
-        <TourCard />
-        <TourCard />
+        <Grid container spacing={5}>
+          <TourCard />
+          <TourCard />
+          <TourCard />
+          <TourCard />
         </Grid>
       </Container>
     </div>
