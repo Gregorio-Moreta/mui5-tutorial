@@ -1,3 +1,8 @@
+https://github.com/harblaith7/MUI5/blob/main/src/data.json
+https://www.youtube.com/watch?v=o1chMISeTC0
+
+This is a tutorial I followed along with to get more familiar with react; I highly recommend it.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
